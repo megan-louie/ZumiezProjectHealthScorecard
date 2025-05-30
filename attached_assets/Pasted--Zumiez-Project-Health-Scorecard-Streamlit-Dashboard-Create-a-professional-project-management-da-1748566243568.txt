@@ -1,0 +1,115 @@
+# Zumiez Project Health Scorecard - Streamlit Dashboard
+
+Create a professional project management dashboard for Zumiez that showcases real-time project health metrics. This should demonstrate advanced PM skills and data visualization capabilities.
+
+## Core Requirements
+
+### 1. Dashboard Structure
+- **Header Section**: Zumiez branding with logo, current date/time, and executive summary
+- **KPI Overview Cards**: 4-6 key metrics displayed as cards (Budget Health, Timeline Status, Risk Level, Team Velocity, etc.)
+- **Interactive Charts Section**: 3-4 different chart types showing project trends
+- **Project Details Table**: Sortable/filterable table of current projects
+- **Risk & Issue Tracker**: Visual alerts and status indicators
+
+### 2. Sample Data to Include
+Generate realistic data for these project categories:
+- **Retail Technology**: POS systems, inventory management, e-commerce platform updates, mobile app development
+- **Store Operations**: New store openings, renovations, equipment rollouts, seasonal merchandising
+- **Brand & Marketing**: Campaign launches, influencer partnerships, social media initiatives
+- **Supply Chain**: Distribution center upgrades, vendor integrations, logistics optimization
+
+### 3. Key Metrics to Display
+- **Budget Variance**: Actual vs. Planned spend with percentage variance
+- **Schedule Performance**: On-time delivery percentage, days ahead/behind
+- **Resource Utilization**: Team capacity, allocation percentages
+- **Risk Score**: Calculated risk index (1-10 scale)
+- **Quality Metrics**: Defect rates, customer satisfaction scores
+- **Milestone Completion**: Progress bars and completion percentages
+
+### 4. Visual Design Requirements
+- **Color Scheme**: Use Zumiez brand colors (orange/black/white theme)
+- **Professional Layout**: Clean, executive-ready presentation
+- **Responsive Design**: Works on desktop and tablet
+- **Interactive Elements**: Hover effects, clickable filters, expandable sections
+
+### 5. Advanced Features
+- **Real-time Updates**: Simulate live data refresh every 30 seconds
+- **Drill-down Capability**: Click on charts to see detailed breakdowns
+- **Export Functionality**: Download reports as PDF/Excel
+- **Alert System**: Visual notifications for projects at risk
+- **Comparative Analysis**: Period-over-period comparisons
+
+### 6. Technical Implementation
+
+```python
+# Required Libraries
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+from datetime import datetime, timedelta
+import numpy as np
+import random
+
+# Dashboard Configuration
+st.set_page_config(
+    page_title="Zumiez Project Health Scorecard",
+    page_icon="🏂",
+    layout="wide"
+)
+```
+
+### 7. Specific Chart Types to Include
+- **Gauge Charts**: For budget health and risk scores
+- **Gantt Chart**: Project timeline visualization
+- **Waterfall Chart**: Budget breakdown and variances
+- **Scatter Plot**: Risk vs. Impact matrix
+- **Heat Map**: Resource allocation across teams
+- **Funnel Chart**: Project stage progression
+
+### 8. Data Simulation Logic
+Create functions to generate:
+- Project names reflecting real Zumiez retail initiatives
+- Realistic budget ranges ($10K - $2M)
+- Project managers with realistic names
+- Status categories (On Track, At Risk, Behind, Complete)
+- Resource types (Retail Operations, Marketing, E-commerce, Store Development, External Vendors)
+
+### 9. Interactive Controls
+- **Date Range Picker**: Filter projects by timeline
+- **Department Filter**: IT, Retail, Operations, Corporate
+- **Status Filter**: Multi-select for project statuses
+- **Search Bar**: Find specific projects quickly
+- **Refresh Button**: Manual data refresh option
+
+### 10. Professional Touches
+- **Executive Summary**: Auto-generated insights at the top
+- **Trend Arrows**: Up/down indicators for key metrics
+- **Progress Animations**: Smooth loading and transitions
+- **Tooltips**: Helpful explanations for all metrics
+- **Footer**: Last updated timestamp and data sources
+
+### 11. Sample Project Categories
+```
+- "Zumiez Mobile App 2.0 Launch" (Retail Technology)
+- "POS System Rollout - Q1 Stores" (Retail Technology) 
+- "Seattle Flagship Store Renovation" (Store Operations)
+- "Summer Campaign: Skateboard Collection" (Brand & Marketing)
+- "Inventory Management System Enhancement" (Retail Technology)
+- "West Coast Distribution Center Expansion" (Supply Chain)
+- "Snowboard Season Merchandising Rollout" (Store Operations)
+- "Influencer Partnership Program Launch" (Brand & Marketing)
+- "E-commerce Platform Mobile Optimization" (Retail Technology)
+- "New Store Opening: Portland Downtown" (Store Operations)
+```
+
+### 12. Deployment Instructions
+Include comments for easy Streamlit deployment:
+- Requirements.txt file contents
+- Streamlit configuration options
+- Instructions for connecting to Streamlit Cloud
+
+## Success Criteria
+The final dashboard should look like something a Fortune 500 company would use for executive reporting, with the specific context of Zumiez's retail and action sports focus. It should demonstrate both technical skills and business acumen in project management.
+
+Make it visually stunning, data-rich, and interactive - something that would genuinely impress interviewers and show PM expertise in action!
