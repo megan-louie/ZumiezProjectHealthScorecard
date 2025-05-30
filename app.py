@@ -224,7 +224,7 @@ def main():
             return ''
         
         if 'status' in display_df.columns:
-            styled_df = display_df.style.applymap(highlight_status, subset=['status'])
+            styled_df = display_df.style.map(highlight_status, subset=['status'])
             st.dataframe(styled_df, use_container_width=True, height=400)
         else:
             st.dataframe(display_df, use_container_width=True, height=400)
