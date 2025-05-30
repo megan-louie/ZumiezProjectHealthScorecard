@@ -197,7 +197,7 @@ class ChartComponents:
         )
         
         # Format y-axis as currency
-        fig.update_yaxis(tickformat='$,.0f')
+        fig.update_layout(yaxis=dict(tickformat='$,.0f'))
         
         st.plotly_chart(fig, use_container_width=True)
     
@@ -301,7 +301,7 @@ class ChartComponents:
             margin=dict(t=50, b=50, l=50, r=50)
         )
         
-        fig.update_yaxis(tickformat='$,.0f')
+        fig.update_layout(yaxis=dict(tickformat='$,.0f'))
         
         st.plotly_chart(fig, use_container_width=True)
     
@@ -358,8 +358,10 @@ class ChartComponents:
             margin=dict(t=50, b=50, l=50, r=50)
         )
         
-        fig.update_xaxis(range=[0, 10])
-        fig.update_yaxis(range=[0, 10])
+        fig.update_layout(
+            xaxis=dict(range=[0, 10]),
+            yaxis=dict(range=[0, 10])
+        )
         
         st.plotly_chart(fig, use_container_width=True)
     
@@ -491,6 +493,6 @@ class ChartComponents:
             xaxis_title='Milestone'
         )
         
-        fig.update_yaxis(range=[0, 100])
+        fig.update_layout(yaxis=dict(range=[0, 100]))
         
         st.plotly_chart(fig, use_container_width=True)
